@@ -1,1 +1,1 @@
-blog.puzzledge.eu 
+trip.puzzledge.eu 

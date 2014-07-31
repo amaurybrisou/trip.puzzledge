@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  each val, key in titles
+    div.top10
+      a(href='/blog/#{key}')
+        h3= val.title
+        div.date= val.date

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div.span8
+    h1= title
+    != body
+  div.span4
+    h4 About the Article
+    ul
+      each val, key in meta
+        li #{key} : #{val} 
+      p Permalink to this article: #{settings.url}blog/#{meta.date}/#{meta.slug}
+    p
+      a(href='/').btn Back to Article list

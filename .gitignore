@@ -1,0 +1,27 @@
+*.sh
+
+*.sqlite
+*.odt
+doc/doc.pdf
+*sublime-*
+LeBrisouBackend*
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+
+*.html
+
+# Dependency directory
+# Commenting this out is preferred by some people, see
+# https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
+node_modules
+
+# Users Environment Variables
+.lock-wscript

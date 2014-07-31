@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/default.css')
+
+    script(src='/javascripts/functions.js')
+    title Trips - #{settings.author}
+
+  body
+    div#header
+      div#pres #{settings.pres}
+
+    div#content
+      block content
+        div#container
+          p.footer Created with 
+          a(class='footer', href='https://github.com/davidsivocha/slimnode') slimnode
+      include analytics

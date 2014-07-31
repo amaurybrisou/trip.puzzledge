@@ -1,0 +1,12 @@
+{
+  "name": "puzzledge.eu hapi blog",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "hapi": "6.x",
+    "catbox-memory": "~1.0.3",
+    "jade": "~1.5.0",
+    "markdown": "~0.5.0",
+    "twitter": "~0.2.9"
+  }
+}

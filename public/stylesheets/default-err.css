@@ -1,0 +1,152 @@
+
+
+* {
+	margin: 0;
+ 	background: #EBF0F2;
+ 	
+}
+
+
+body {
+
+	width: 1024px;
+	height: 400px;
+	margin: auto;
+}
+
+body pre  {
+  width: 1024px;
+  margin: auto;
+  /* For Firefox */
+  white-space: pre-wrap;
+
+  /* For Chrome and IE */
+  word-wrap: break-word;
+}
+
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+
+.rotating {
+	position: absolute;
+	width: 640px;
+	height: 644px;
+  -webkit-animation: rotating 6s linear infinite;
+  -moz-animation: rotating 6s linear infinite;
+  -ms-animation: rotating 6s linear infinite;
+  -o-animation: rotating 6s linear infinite;
+  animation: rotating 6s linear infinite;
+}
+
+@-webkit-keyframes travel {
+  from { left: 0;     }
+  to   { left: 1180px; }
+}
+
+@-webkit-keyframes bounce {
+  from, to  {
+  	top: 0px;
+    
+    -webkit-animation-timing-function: ease-out;
+  }
+  50% {
+  	top: -300px;
+    
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+
+
+/* keyframes definition for other browsers */
+
+@keyframes travel {
+  from { left: 0px;     }
+  to   { left: 1180px; }
+}
+
+@keyframes bounce {
+  from, to  {
+    top: 0;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    top: -300px;
+    animation-timing-function: ease-in;
+  }
+}
+
+
+#traveler { 
+	position: absolute;
+	width: 10px;
+	height: 100%;
+	-webkit-animation-name: travel;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-duration: 6s;
+	animation-name: travel;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 6s;
+}
+
+
+#bouncer {
+	position: absolute;
+	width: 640px;
+	height: 644px;
+	background: url('/images/err.jpg') no-repeat scroll center;*/
+	-moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  behavior: url(/PIE.htc);
+  /*border: black 1px solid;*/
+
+	-webkit-animation-name: bounce;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-duration: 4.2s;
+	animation-name: bounce;
+	animation-iteration-count: infinite;
+	animation-duration: 4.2s;
+}
+
+
+
+
+
+html:hover {
+  cursor: none;
+}

@@ -1,0 +1,8 @@
+{
+   "title" : "Avant le Départ...",
+   "date"  : "2014/08/02",
+   "slug"  : "avant-le-depart",
+   "author": "Amaury Brisou"
+}
+
+Une petit page à remplir avant le départ, illustrer les préparatifs onéreux et nombreux !

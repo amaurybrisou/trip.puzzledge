@@ -144,10 +144,10 @@ internals.addItems = function (config) {
         var data = fs.readFileSync(article, 'utf-8')
         var array = data.toString().split("\n\n")
         var parsed = JSON.parse(array[0])
-        parsed.url = config.url + "/" + parsed.date + "/" + parsed.slug
-        parsed.author = config.author
-        parsed.description = config.description
-        parsed.categories = config.categories
+        parsed.url = config.url + "/blog/" + parsed.date + "/" + parsed.slug
+        parsed.author = parsed.author || config.author
+        parsed.description = parsed.description || config.description
+        parsed.categories = parsed.categories || config.categories
         internals.addItem(parsed)
       }
 
@@ -159,7 +159,7 @@ internals.addItem = function (data, config) {
   this._feed.item({
     title: data.title,
     description: data.description || '',
-    url: 'http://example.com/article4?this&that', // link to the item
+    url: data.url, // link to the item
     categories: data.categories || ['IT'], // optional - array of item categories
     author: data.author, // optional - defaults to feed author property
     date: data.date, // any format that js Date can parse.
@@ -268,7 +268,7 @@ exports.article = function (req, res) {
     if (err) {
       res.view('error', {
         title: '404',
-        settings: settings
+        settings: config
       })
     } else {
       var doc = data.toString().split("\n\n")

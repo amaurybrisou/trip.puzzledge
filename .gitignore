@@ -6,6 +6,8 @@ doc/doc.pdf
 *sublime-*
 LeBrisouBackend*
 
+articles/*
+
 # Logs
 logs
 *.log

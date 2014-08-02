@@ -12,8 +12,7 @@ html, body{
 }
 
 html {
-  /*background-color: #EBF0F2;*/
-  background: white url('../images/background.jpg') no-repeat scroll center;
+  background-color: #EBF0F2;
 }
 
 body  {
@@ -32,7 +31,7 @@ body pre  {
   word-wrap: break-word;
 }
 
-h1, h2, h3, title, a,  h4, h5, .span4 li, .span4 p, .btn, #add, #title, #pres, .twit  {
+h1, h2, h3, title, a,  h4, h5, .span4 li, .span4 p, .btn, #add, #title, #pres, #rss, .twit  {
   color: black;
   font-family: "PT Sans", "American Typewriter", "Courier New", "Courier", serif;
   font-weight: normal;
@@ -80,8 +79,12 @@ h3 {
   text-align: center;
 }
 
-#header a {
-  padding: 1px 10px 1px 10px;
+#header * {
+  display: inline;
+}
+
+#header .title_flavor, #header .rss{
+  padding: 1px 30px 1px 10px;
   text-decoration: none;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -89,21 +92,32 @@ h3 {
   behavior: url(/PIE.htc);
 }
 
+
+#pres, #word, #rss {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
 #word {
   float: left;
 }
 
-#add {
-  height: 16px;
+#rss {
+  float: right;
+  
+}
+
+.title_flavor {
+
   background: url('../images/list.png') no-repeat scroll center;
 }
 
-
-
-#pres, #word {
-  font-size: 0.8em;
-  font-style: italic;
+.rss {
+  background: url('../images/rss.png') no-repeat scroll center;
+  height: 16px;
+  width: 32px;
 }
+
 
 
 

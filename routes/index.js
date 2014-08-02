@@ -57,9 +57,9 @@ routes = [{
   method: "GET",
   handler: controllers.index
 }, {
-  path: "/add",
+  path: "/rss",
   method: "GET",
-  handler: controllers.add
+  handler: controllers.rss
 }, {
   path: "/page/{page}",
   method: "GET",
@@ -73,10 +73,6 @@ routes = [{
   method: "GET",
   handler: controllers.article
 
-}, {
-  path: "/twits",
-  method: "GET",
-  handler: controllers.twits
 }];
 
 module.exports = routes;

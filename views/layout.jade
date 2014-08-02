@@ -8,7 +8,14 @@ html
 
   body
     div#header
+      a#word(target='_blank')
+      a#title(href='/')
+        span.title_flavor
+        div #{settings.sitename} - #{settings.author}
+        span.title_flavor
       div#pres #{settings.pres}
+      a#rss(target='_blank', href='/rss')
+        span.rss
 
     div#content
       block content

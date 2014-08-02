@@ -7,3 +7,7 @@ block content
   div.span4
     p
       a(href='/').btn Back to Article list
+      script.
+        var HC_comment_box_theme = "default";
+        var HC_comment_box_server = "#{settings.url}";
+      script(src="#{settings.url}/comments/js/comment_box_code.js")

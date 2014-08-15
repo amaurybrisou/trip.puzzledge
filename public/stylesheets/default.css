@@ -162,4 +162,7 @@ a:active, a:focus, a:visited, a {
 }
 
 
-
+.img-small {
+  width: 120px;
+  height: 100px;
+}

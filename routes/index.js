@@ -19,6 +19,16 @@ routes = [{
     }
   }
 }, {
+  path: "/photos/{path*}",
+  method: "GET",
+  handler: {
+    directory: {
+      path: path + "/public/photos/",
+      listing: false,
+      index: false
+    }
+  }
+}, {
   path: "/images/{path*}",
   method: "GET",
   handler: {

@@ -6,4 +6,4 @@
    "description": "Rien de bien flamboyant !"
 }
 
-Une petit page à remplir avant le départ, illustrer les préparatifs onéreux et nombreux !
+Une petite page à remplir avant le départ, illustrer les préparatifs onéreux et nombreux !

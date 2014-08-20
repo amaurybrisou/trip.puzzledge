@@ -172,13 +172,16 @@ internals.addItem = function (data, config) {
 
 }
 
-internals.getRss = function (config) {
+internals.getRss = function (_config) {
+  var config = _config
   if (!this.hasRss) {
     internals.feed(config)
     internals.addItems(config)
 
     setInterval(function () {
-
+      console.log('Updating Rss Feed');
+      internals.feed(config)
+      internals.addItems(config)
     }, config.rss_update_delay)
   }
 

@@ -7,6 +7,7 @@ doc/doc.pdf
 LeBrisouBackend*
 
 articles/*
+public/photos/*
 
 # Logs
 logs

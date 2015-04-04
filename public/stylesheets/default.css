@@ -102,6 +102,13 @@ h3 {
   float: left;
 }
 
+.word_tooltip{
+  background: #C8DBE3;
+  line-height: 1.2em;
+  padding: 1px 5px 1px 5px;
+}
+
+
 #rss {
   float: right;
   

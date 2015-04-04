@@ -51,7 +51,7 @@ window.onload = function() {
       }
     }
 
-    xmlhttp.open("GET", "http://trip.puzzledge.org/words/random", true);
+    xmlhttp.open("GET", "/words/random", true);
     xmlhttp.send();
 
   }

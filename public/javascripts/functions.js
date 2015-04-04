@@ -1,4 +1,4 @@
-window.onload = function () {
+window.onload = function() {
 
   function getTwits() {
     var xmlhttp;
@@ -9,7 +9,7 @@ window.onload = function () {
     }
 
 
-    xmlhttp.onreadystatechange = function () {
+    xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
         document.getElementById("twits").innerHTML = xmlhttp.responseText;
@@ -29,15 +29,29 @@ window.onload = function () {
     }
 
 
-    xmlhttp.onreadystatechange = function () {
+    xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
         var data = JSON.parse(xmlhttp.responseText);
-        document.getElementById("word").innerHTML = data.word;
-        document.getElementById("word").setAttribute('href', "https://www.wordnik.com/words/" + data.word);
+
+        if (data.Words != undefined) {
+
+          $("#word").html(data.Words[0].Word);
+          $("#word").attr('href', "https://wordreference.com/" + data.Words[0].Language.toLowerCase() + "fr/" + data.Words[0].Word);
+          $('#word').attr('title', data.Words[0].Pos + ', ' + data.Words[0].Definition);
+          $("#word").tooltip({
+            tooltipClass: 'word_tooltip',
+            position: {
+              my: "left center",
+              at: "left bottom+10",
+
+            }
+          });
+        }
       }
     }
 
-    xmlhttp.open("GET", "http://api.wordnik.com:80/v4/words.json/randomWord?hasDictionaryDef=false&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5", true);
+    xmlhttp.open("GET", "http://localhost:8083/words/random", true);
     xmlhttp.send();
 
   }

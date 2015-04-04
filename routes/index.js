@@ -9,6 +9,16 @@ routes = [{
   path: '/{p*}',
   handler: controllers.notFound
 }, {
+  path: "/stylesheets/images/{path?}",
+  method: "GET",
+  handler: {
+    directory: {
+      path: path + "/public/stylesheets/images",
+      listing: false,
+      index: false
+    }
+  }
+}, {
   path: "/stylesheets/{path?}",
   method: "GET",
   handler: {
@@ -62,6 +72,10 @@ routes = [{
   path: '/',
   method: 'GET',
   handler: controllers.index,
+}, {
+  path: '/words/random',
+  method: 'GET',
+  handler: controllers.getWord,
 }, {
   path: "/blog",
   method: "GET",

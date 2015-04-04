@@ -93,7 +93,7 @@ h3 {
 }
 
 
-#pres, #word, #rss {
+#pres, #word, #rss, .word_tooltip {
   font-size: 0.8em;
   font-style: italic;
 }
